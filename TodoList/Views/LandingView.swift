@@ -77,9 +77,8 @@ struct LandingView: View {
             }
             .navigationTitle("To do")
             .sheet(isPresented: $presentingNewItemSheet) {
-                NewItemView(showSheet: $presentingNewItemSheet)
+                NewItemView(viewModel: viewModel, showSheet: $presentingNewItemSheet)
                     .presentationDetents([.fraction(0.15)])
-                    .environment(viewModel)
             }
             // Add a tool bar to the top of the interface
             // NOTE: For a toolbar to appear, it must be

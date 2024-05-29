@@ -15,7 +15,7 @@ struct NewItemView: View {
     @State var newItemDescription = ""
     
     // Access the view model through the environment
-    @Environment(TodoListViewModel.self) var viewModel
+    @Bindable var viewModel: TodoListViewModel
     
     // Binding to control whether this view is visible
     @Binding var showSheet: Bool
@@ -57,6 +57,6 @@ struct NewItemView: View {
     }
 }
 
-#Preview {
-    NewItemView(showSheet: .constant(true))
-}
+//#Preview {
+//    NewItemView(showSheet: .constant(true))
+//}
